@@ -14,10 +14,14 @@
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#">Filmster</a>
-	      <% if user_signed_in? %>
-		      <%= link_to 'Edit Profile', edit_user_registration_path %>
-		  <% end %>
+	      <!-- <a class="navbar-brand" href="#">Filmster</a> -->
+	      <%= link_to 'Filmster', root_path, class: 'navbar-brand' %>
+	      <div class="nav-links">
+		      <% if user_signed_in? %>
+			      <%= link_to 'Log Out', destroy_user_session_path, method: :delete %> |
+			      <%= link_to 'Edit Profile', edit_user_registration_path %>
+			  <% end %>
+	      </div>
 	    </div>
 	  </div><!-- /.container-fluid -->
 	</nav>

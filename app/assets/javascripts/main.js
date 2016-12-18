@@ -57,7 +57,7 @@ $(function(){
 		movieInfo += `<p><img src = ${data["Poster"]}</p>`;
 
 	    $.each(data, function(key, value){
-	    	if (key === "Poster")
+	    	if (key === "Poster" || key === "Response" || key === "imdbID")
 	    		return true;
 	    	movieInfo += `<p>${key}: ${value}</p>`;
 	    })
